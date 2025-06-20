@@ -1,0 +1,657 @@
+// main: ../style.less
+.term-accept {
+    margin-top: 5px;
+
+    .wpcf7-list-item {
+        margin: 0 !important;
+
+        span,
+        label,
+        input {
+            cursor: pointer;
+        }
+
+        input {
+            accent-color: @main-color;
+        }
+    }
+
+    span {
+        font-size: 13px;
+        font-weight: 300;
+
+        a {
+            font-size: 13px;
+            font-weight: 300;
+            text-decoration: underline;
+        }
+    }
+}
+
+textarea~.wpcf7-not-valid-tip {
+    bottom: 0;
+}
+
+.form__wrapper.floating-labels-form {
+    width: 100%;
+    padding: 1% 0;
+}
+
+.wpcf7-not-valid-tip {
+    position: absolute;
+    bottom: -12px;
+    left: 0 !important;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.contact-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 45px;
+}
+
+.contact-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media @screen-sm {
+        grid-template-columns: 40% 1fr;
+    }
+}
+
+.contact-form-wrap {
+    padding: 8% 3%;
+
+    @media @screen-sm {
+        padding: 0 10%;
+    }
+}
+
+.floating-labels-form {
+    &.main-form {
+        max-width: 1200px;
+
+        .single-field {
+            textarea {
+                height: 100px;
+            }
+        }
+
+        .wpcf7-form-control.wpcf7-radio {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            input {
+                height: 25px;
+                width: 25px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            span {
+                display: flex;
+                margin-right: 5%;
+            }
+        }
+
+        .single-field.full-field {
+            padding: 15px;
+            border-bottom: 1px solid;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .wpcf7-form-control.wpcf7-checkbox {
+            display: flex;
+            margin-top: 10px;
+
+            >span {
+                display: flex;
+                align-items: center;
+                margin-right: 5%;
+            }
+
+            input {
+                margin-right: 10px;
+                height: 22px;
+                width: 22px;
+                cursor: pointer;
+            }
+        }
+
+        .term-accept {
+            label {
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                position: relative;
+                font-size: 15px;
+                pointer-events: all;
+                left: 0;
+            }
+
+            input {
+                height: 22px;
+                width: 22px;
+            }
+
+            span {
+                width: 90%;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+
+        .wpcf7-list-item-label {
+            cursor: auto;
+        }
+
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .single-field.full-field .wpcf7-form-control-wrap {
+            position: unset;
+
+            .wpcf7-not-valid-tip {
+                bottom: -2px;
+                left: 0;
+                font-size: 13px;
+                color: @main-color;
+            }
+        }
+
+        // select {
+        // background: @white;
+        // }
+        .single-field.arrow-wrap::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            right: 20px;
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+            top: 35%;
+            z-index: 9;
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+    }
+
+    .single-field {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 0;
+
+        &.tel-field {
+            label {
+                left: 52px;
+                // text-transform: uppercase;
+            }
+        }
+
+        .text {
+            font-weight: 600;
+            color: #1f3741;
+        }
+
+        input {
+            margin-top: 10px;
+            height: 40px;
+            padding: 5px 0;
+            width: 100%;
+            padding-left: 15px;
+            // border-radius: 5px !important;
+            border-bottom: 1px solid @dark-color;
+            font-weight: 300;
+            border-radius: 0;
+            // @media screen and (max-width:768px){
+            // 	font-size: 14px;
+            // }
+        }
+
+        select {
+            position: relative;
+            height: 50px;
+            padding: 15px 15px 5px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            width: 100%;
+            border-bottom: 1px solid @dark-color;
+            font-weight: 300;
+            border-radius: 0;
+        }
+
+        textarea {
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-left: 15px;
+            // border-radius: 5px !important;
+            border-bottom: 1px solid @dark-color;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            height: 180px;
+            max-height: 500px;
+            min-height: 100px;
+            font-weight: 300;
+            border-radius: 0;
+        }
+
+        label {
+            position: absolute;
+            top: 12px;
+            padding-left: 15px;
+            font-size: 16px;
+            margin: 0;
+            opacity: .8;
+            transform: scale(1.2);
+            transform-origin: top left;
+            transition: transform 120ms linear;
+            will-change: transform;
+            pointer-events: none;
+            font-weight: 400;
+
+            &.floated-label {
+                transform: translateY(-16px) scale(1);
+
+                @media @screen-xs {
+                    transform: translateY(-10px) scale(1);
+                }
+            }
+        }
+    }
+
+    .wpcf7-list-item {
+        margin: 0;
+
+        input {
+            accent-color: @main-color;
+        }
+    }
+}
+
+.cf7-form-wrap.floating-labels-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.fields-wrap.double {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media @screen-sm {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+.single-form-field.checkbox-field {
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+    .wpcf7-list-item-label {
+        font-size: 15px;
+        color: @main-color;
+        font-weight: 600;
+    }
+}
+
+
+
+
+.contact-information-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.grey-box-wrapper.grey-bg {
+    padding: 20px;
+
+    @media @screen-sm {
+        padding: 30px;
+    }
+}
+
+.grey-box-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.grey-box-text p {
+    font-size: 15px;
+    margin-bottom: 5px;
+
+    a {
+        text-decoration: underline;
+    }
+}
+.faqs-left-wrapper .border-btn-wrap {
+	font-weight: 300;
+}
+.form-info-wrap .form-info-title {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+.form-submit-btn input {
+    font-weight: 300;
+}
+
+.recaptcha-text {
+    font-size: 12px;
+    font-weight: 300;
+
+    a {
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+
+.main-contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.wpcf7-form-control.wpcf7-submit.btn.btn-ghost {
+    background: @main-color;
+    border: 1px solid @main-color;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cf7-cf-turnstile {
+    margin: auto;
+}
+
+.wpcf7-form-control.wpcf7-submit.has-spinner.btn.third-color {
+    background: @main-color;
+    border: 1px solid @main-color !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 30px;
+    width: max-content;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid @main-color !important;
+        color: @main-color !important;
+    }
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    margin-top: 5px;
+    pointer-events: none;
+}
+
+.form-info-content {
+    max-height: 0px;
+    overflow-y: auto;
+    transition: all .3s ease-in-out;
+    font-size: 15px;
+    font-weight: 300;
+
+    &.show {
+        max-height: 500px;
+    }
+}
+
+.form-info-title {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.form-info-wrap {
+    margin-bottom: 5px;
+}
+
+.acf-map {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* RESPONSE LAYOUT */
+.wpcf7 form .wpcf7-response-output {
+    padding: 15px 100px;
+    text-align: left;
+    width: fit-content;
+    margin: 25px auto;
+    border-color: #c9effb;
+    background: #c9effb;
+    color: #016686;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    border-color: #fff1cc;
+    background: #fff1cc;
+    color: #a47700;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    background: #EAFAED;
+    border-color: #EAFAED;
+    color: #004D1E;
+}
+
+.wpcf7-response-output.success-message::before {
+    content: '';
+    background-image: url('assets/images/success-icon.png');
+    /* background-image: url('wp-content/uploads/success-icon.png'); Με upload το αρχείο στο wordpress με το προσοχή στο σωστό path */
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+/* FORM SUBMIT */
+.wpcf7 form.wpcf7-form.submitting .wpcf7-spinner {
+    opacity: 1;
+}
+
+/* SPINNER */
+.wpcf7-spinner {
+    visibility: visible;
+    display: inline-block;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 50px;
+    /* Ελέγξε το margin */
+    position: absolute;
+    /* Ελέγξε το position */
+    top: calc(50% - 10px);
+    /* Ελέγξε το top */
+    pointer-events: none;
+    border: 3px solid rgba(255, 255, 255, .7);
+    /* Ελέγξε το χρώμα */
+    transition: all .3s ease;
+    background: transparent;
+    border-top: 3px solid rgba(255, 255, 255, .2);
+    /* Ελέγξε το χρώμα */
+    animation: loader_spinner 1s linear infinite;
+}
+
+.wpcf7-spinner:before {
+    display: none;
+}
+
+@keyframes loader_spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+// reservations style
+.full-field-wrapper.date_fields {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media @screen-md {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .border-right {
+            border-right: 1px solid #000;
+        }
+    }
+}
+
+.double-field-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media @screen-xs {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    @media @screen-sm {
+        gap: 30px;
+
+    }
+
+    .wpcf7-form-control-wrap.your-contact-number {
+        width: 100%;
+        display: grid;
+    }
+}
+
+
+.wpcf7-not-valid-tip {
+    bottom: unset;
+}
+
+// reservations style ends
+
+
+//for phone gaps extra
+.email-telephone-info-wrapper,
+.text.regular.medium.white {
+    line-height: 35px;
+}
+
+
+//extra book-now arrow
+.single-field.full-width.label_f:before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(-45deg);
+    z-index: 5;
+}
+
+// extra 
+.flag-container {
+    margin-right: 20px;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+    width: 42px;
+    margin-right: 10px;
+}
+
+/* extra for mob */
+.mob-info {
+    padding: 8% 7%;
+
+    .email-telephone-info-wrapper,
+    .text.regular.medium.white .no-line {
+        line-height: unset;
+    }
+
+    .contact-information-wrapper {
+        margin-top: 2px;
+    }
+}
+
+//telephield width
+.wpcf7-form-control-wrap {
+    position: relative;
+    display: grid;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+    width: 46px;
+    margin-right: 10px;
+}
+
+
+.select-before {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        right: 15px;
+        top: 14px;
+        border-right: 1px solid @main-color;
+        border-bottom: 1px solid @main-color;
+        transform: rotate(45deg);
+        transition: all .3s ease-in-out;
+
+    }
+
+    &.rotate {
+        &::before {
+            transform: rotate(-135deg);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+• Header improvements
+• addition: footer, "secure payments" section  https://prnt.sc/U54-sSriuso8
+• addition: homepage, "useful info" section  https://prnt.sc/YgSyefJvTCEo
+          buttons links style --> Admin Options --> General --> Button Style https://prnt.sc/3w5lD4Wk9W60  https://prnt.sc/kosgPUQbf62j
+• FAQs are located on admin options --> general
+• addition: homepage, hero "version 4"  https://prnt.sc/CSoeJjmF8wed
+• addition: homepage,  Why Choose Us  "version 2"  https://prnt.sc/7QDCCkTQWYr6
+• addition: homepage, popup "version 2"  https://prnt.sc/iW7Mj_LazaXg
+• improvement: Fleet Categories
+• improvement: Fleet Slider
+• addition: gallery V4, with mobile scroll tabs
+-------------
+
+✓ INFO PAGES
+
+ • addition: Templates ↓ (all needs the ACF) https://prnt.sc/cYOxCrRQnLKB
+            template-extras,
+            template-faqs,
+            template-insurance,
+            template-terms  (terms & conditions + privacy policy pages)
+
+            Sidebar links style --> Admin Options --> General --> Button Style https://prnt.sc/kosgPUQbf62j
+
+
+• exclude "[Page] Pages" fields from these templates https://prnt.sc/cfyhZER1DyLe
+
+
+• register Sidebar Menu - https://prnt.sc/JD1WpTz1ewJH
+
+
+• install plugin "Advanced Custom Fields: Table Field"  -->  template-insurance https://prnt.sc/69mtwt-MJBkg
+   (use <span class="valid"></span> or <span class="invalid"></span>) https://prnt.sc/8-vV-n4LUsTK
+
+-------------
+
+✓ Our Fleet Categories section  https://prnt.sc/2KVc1JEexZO-
+
+• Αυτό το section υπήρχε 2 φορές με 2 διαφορετικά πεδία. 1 στην Αρχική σελίδα και 1 στην Our Fleet. 1 στα options και 1 στην σελίδα. https://prnt.sc/TpV86d4moSxM   https://prnt.sc/QfQPKxAGsI3i
+Αυτά τα πεδία τα έσβησα και πρόσθεσα το section με 2 design, στο Flexible Content, με την ονομασία "Product Categories" https://prnt.sc/UUW3r53FWfYJ
+(σε περίπτωση που θέλουμε να βάλουμε άλλο προϊον εκτός απο fleet) *Ανάλογα τις ανάγκες, αυτό ίσως πρέπει να μπει στα options
+
+-------------
+
+✓ Fleet Slider section https://prnt.sc/zrtqsSyOlDNl
+
+• Αυτό το section υπήρχε 1 στην Αρχική σελίδα και 1 στην Our Fleet. 1 τα πεδία μόνο στα options https://prnt.sc/s8IlhetxYfm4
+Αυτά τα πεδία τα έσβησα και πρόσθεσα το section με 2 design, στο Flexible Content, με την ονομασία "Product Slider"  https://prnt.sc/Lg2Nf32sfc6f
+*Ανάλογα τις ανάγκες, αυτό ίσως πρέπει να μπει στα options
+Εδώ βάζουμε το shortcode του gocars με τις αναλογες classes . Μελλοντικά μπορούμε να προσθέσουμε repeater ή κάποιο άλλο πεδίο (σε περίπτωση που θέλουμε να βάλουμε άλλο προϊον)
+
+
+-------------
+
+✓ Offices Section --> https://prnt.sc/KvIw-NQGpvDy
+• Νέο V1 
+
+-------------
+
+✓ Post Type Slider Section --> https://prnt.sc/LxG95ML4TEz4
+• Νέο V1 
+
+-------------
